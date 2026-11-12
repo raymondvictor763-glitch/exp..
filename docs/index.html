@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Department Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🎓 College Portal</h2>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#students">Students</a>
+    <a href="#addStudent">Add Student</a>
+    <a href="#departments">Departments</a>
+</div>
+
+<div class="main">
+
+    <header>
+        <h1>Department Management</h1>
+        <p>Welcome to College Administration Portal</p>
+    </header>
+
+    <section id="dashboard" class="cards">
+        <div class="card">
+            <h3>Total Students</h3>
+            <h1 id="totalStudents">0</h1>
+        </div>
+
+        <div class="card">
+            <h3>Departments</h3>
+            <h1>4</h1>
+        </div>
+
+        <div class="card">
+            <h3>College Status</h3>
+            <h1>Active</h1>
+        </div>
+    </section>
+
+    <section id="addStudent" class="panel">
+        <h2>Add New Student</h2>
+
+        <form id="studentForm">
+            <input type="number" id="studentId"
+                   placeholder="Student ID" required>
+
+            <input type="text" id="studentName"
+                   placeholder="Student Name" required>
+
+            <select id="department" required>
+                <option value="">Select Department</option>
+                <option>Computer Science</option>
+                <option>Information Technology</option>
+                <option>Mechanical Engineering</option>
+                <option>Electronics</option>
+            </select>
+
+            <button type="submit">Add Student</button>
+        </form>
+    </section>
+
+    <section id="students" class="panel">
+        <h2>Student Records</h2>
+
+        <div class="filters">
+            <input type="text" id="search"
+                   placeholder="Search student...">
+
+            <select id="filterDepartment">
+                <option value="">All Departments</option>
+                <option>Computer Science</option>
+                <option>Information Technology</option>
+                <option>Mechanical Engineering</option>
+                <option>Electronics</option>
+            </select>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Action</th>
+                </tr>
+                </thead>
+                <tbody id="studentTable"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="departments" class="panel">
+        <h2>Our Departments</h2>
+        <div class="department-list">
+            <div>💻 Computer Science</div>
+            <div>🌐 Information Technology</div>
+            <div>⚙️ Mechanical Engineering</div>
+            <div>🔌 Electronics</div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 College Management System</p>
+    </footer>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
